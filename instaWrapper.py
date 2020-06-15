@@ -7,7 +7,6 @@ import requests
 import json
 from time import sleep as s
 import urllib.parse
-import re
 
 
 
@@ -23,10 +22,6 @@ default = {
 	}
 
 class InstagramBot:
-	def getCSRFtoken(self):
-		r = requests.get(default["Origin"])
-		rr = str(re.search("csrf_token\":\"[\\d\\w]+\"", r.text)).split(":")[1].replace("'>", "")
-		return rr
 	def __init__(self, auth):
 		self.auther = json.loads(auth)
 		self.auth = {
@@ -36,7 +31,6 @@ class InstagramBot:
 		self.headers = {}
 		self.headers.update(default)
 		self.headers.update(self.auth)
-		# self.auth["X-CSRFToken"] = self.getCSRFtoken()
 
 
 
@@ -122,7 +116,7 @@ class InstagramBot:
 		r = requests.post(Host, headers=self.headers)
 		robject = {
 			'status': r.status_code,
-			'message': r.text
+			'message': r.json()
 		}
 		return robject
 
@@ -138,6 +132,18 @@ class InstagramBot:
 		r = requests.post(Host, data=payload, headers=self.headers)
 		robject = {
 			'status': r.status_code,
-			'message': r.text
+			'message': r.json()
+		}
+		return robject
+
+	def deleteComment(self, postID, commentID):
+		"""
+		removes a comment on post with given postID & commentID
+		"""
+		Host = f"https://www.instagram.com/web/comments/{postID}/delete/{commentID}/"
+		r = requests.post(Host, headers=self.headers)
+		robject = {
+			'status': r.status_code,
+			'message': r.json()
 		}
 		return robject
