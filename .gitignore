@@ -1,0 +1,4 @@
+ressources/
+config.json
+__pycache__/
+call.py
