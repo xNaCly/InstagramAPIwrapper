@@ -1,7 +1,7 @@
 """
 reverse engineered instagram wrapper
 
-currently supports: `getID, likePost, commentPost, User, search`
+currently supports: `getID, likePost, commentPost, deletePost, User, search`
 """
 import requests
 import json
