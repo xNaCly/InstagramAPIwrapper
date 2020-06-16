@@ -7,7 +7,7 @@ import requests
 import json
 from time import sleep as s
 import urllib.parse
-
+import time
 
 
 default = {
@@ -26,7 +26,8 @@ class InstagramBot:
 		self.auther = json.loads(auth)
 		self.auth = {
 		"X-CSRFToken": self.auther["X-CSRFToken"],
-		"Cookie": self.auther["Cookie"]
+		"Cookie": self.auther["Cookie"],
+		"X-Instagram-AJAX": self.auther["X-Instagram-AJAX"]
 		}
 		self.headers = {}
 		self.headers.update(default)
@@ -55,7 +56,7 @@ class InstagramBot:
 
 		throws error if none are available
 		"""
-		Host = "https://www.instagram.com/web/search/topsearch/?query="+user
+		Host = default["Origin"] + "/web/search/topsearch/?query=" + user
 		r = requests.get(Host, headers=self.headers)
 		if r.status_code != 200:
 			raise ValueError("Query isnt availabe")
@@ -73,7 +74,7 @@ class InstagramBot:
 
 		throws error if not found/not available
 		"""
-		Host = f"https://www.instagram.com/{user}/?__a=1"
+		Host = default["Origin"] + "/"+ user + "/?__a=1"
 		r = requests.get(Host, headers=self.headers)
 		if len(r.text) < 10:
 			raise ValueError("User isnt availabe")
@@ -112,7 +113,7 @@ class InstagramBot:
 		ty = "like"
 		if  unlike == True:
 			ty = "unlike"
-		Host = f"https://www.instagram.com/web/likes/{id}/{ty}/"
+		Host =  f"/web/likes/{id}/{ty}/"
 		r = requests.post(Host, headers=self.headers)
 		robject = {
 			'status': r.status_code,
@@ -126,7 +127,7 @@ class InstagramBot:
 		comments on post with given id
 		"""
 		comment = urllib.parse.quote(comment)
-		Host = f"https://www.instagram.com/web/comments/{id}/add/"
+		Host = default["Origin"] + f"/web/comments/{id}/add/"
 		self.headers["Content-Length"] = str(len(comment))
 		payload = f"comment_text={comment}s"
 		r = requests.post(Host, data=payload, headers=self.headers)
@@ -140,8 +141,43 @@ class InstagramBot:
 		"""
 		removes a comment on post with given postID & commentID
 		"""
-		Host = f"https://www.instagram.com/web/comments/{postID}/delete/{commentID}/"
+		Host = default["Origin"] +f"/web/comments/{postID}/delete/{commentID}/"
 		r = requests.post(Host, headers=self.headers)
+		robject = {
+			'status': r.status_code,
+			'message': r.json()
+		}
+		return robject
+	
+	def post(self, image, caption):
+		pass
+
+	def follow(self, username):
+		id = self.User(username)
+		Host = default["Origin"] + "/web/friendships/" + id["user"]["id"] + "/follow/"
+		r = requests.post(Host, headers=self.headers)
+		robject = {
+			'status': r.status_code,
+			'message': r.json()
+		}
+		return robject
+
+	
+	# def unfollow(self, username):
+	# 	pass
+
+	def post(self, img, caption):
+		date = str(time.time())
+		Host = default["Origin"] + "/rupload_igphoto/fb_uploader_"+date
+		newHeaders = {
+			"X-Instagram-Rupload-Params":'{"media_type":1,"upload_id":"'+date+'","upload_media_height":500,"upload_media_width":500}',
+			"X-Entity-Name": "fb_uploader_"+date
+		}
+
+		newHeaders.update(default)
+		newHeaders.update(self.headers)
+		newHeaders["Content-Type"] = "image/jpeg"
+		r = requests.post(Host, data=img, headers=newHeaders )
 		robject = {
 			'status': r.status_code,
 			'message': r.json()
