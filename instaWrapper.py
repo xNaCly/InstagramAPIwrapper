@@ -149,8 +149,6 @@ class InstagramBot:
 		}
 		return robject
 	
-	def post(self, image, caption):
-		pass
 
 	def follow(self, username):
 		id = self.User(username)
@@ -162,9 +160,6 @@ class InstagramBot:
 		}
 		return robject
 
-	
-	# def unfollow(self, username):
-	# 	pass
 
 	def post(self, img, caption):
 		date = str(time.time())
