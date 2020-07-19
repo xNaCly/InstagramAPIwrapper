@@ -8,7 +8,7 @@
 # Features:
 | Method        | return        | args             |
 |---------------|---------------|------------------|
-| getID         | ID            | link             |
+| getPost        | ID            | link             |
 | likePost      | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | PostID           |
 | unlikePost    | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | PostID           |
 | addComment    | [CommentObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#commentobject) | PostID, string   |
