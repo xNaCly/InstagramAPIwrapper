@@ -13,7 +13,7 @@ import time
 default = {
 		"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
 		"Accept": "*/*",
-		"Accept-Language": "de,en-US;q=0.7,en;q=0.3",
+		"Accept-Language": "en-US;q=0.7,en;q=0.3",
 		"Accept-Encoding": "gzip, deflate, br",
 		"Content-Type": "application/x-www-form-urlencoded",
 		"X-Requested-With": "XMLHttpRequest",
