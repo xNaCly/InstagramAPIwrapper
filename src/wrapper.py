@@ -189,3 +189,16 @@ class Instagram:
 		except:
 			raise ValueError(f"Error - either {username} doesnt exist, or auth is invalid")	
 		return robject
+	
+	def unfollow(self, username):
+		id = self.getUser(username)
+		Host = default["Origin"] + "/web/friendships/" + id["user"]["id"] + "/unfollow/"
+		r = requests.post(Host, headers=self.headers)
+		try:
+			robject = {
+				'status': r.status_code,
+				'message': r.json()
+			}
+		except:
+			raise ValueError(f"Error - either {username} doesnt exist, or auth is invalid")	
+		return robject
