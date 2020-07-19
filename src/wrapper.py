@@ -178,7 +178,7 @@ class Instagram:
 	
 
 	def follow(self, username):
-		id = self.user(username)
+		id = self.getUser(username)
 		Host = default["Origin"] + "/web/friendships/" + id["user"]["id"] + "/follow/"
 		r = requests.post(Host, headers=self.headers)
 		try:
