@@ -1,6 +1,10 @@
 # Docs:
 
-### General Terms:
+## General Info:
+- all methods are well documented here
+- all returnObjects are formated as Python-dicts
+
+## General Terms:
 
 #### StatusObject:
 
