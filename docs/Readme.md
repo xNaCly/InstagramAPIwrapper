@@ -20,7 +20,8 @@
 ## General Info:
 
 -   all methods are well documented [here](https://github.com/xNaCly/InstagramAPIwrapper/blob/master/docs)
--   all returnObjects are formated as Python-dicts
+-   all methods require the usage of basic [auth](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/auth)
+-   all returnObjects are formated as [Python-dicts](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
 
 ## General Terms:
 
