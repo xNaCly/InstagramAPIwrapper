@@ -12,7 +12,7 @@ fortnite
 
 -   Users [array]
 
-```
+```python
 [
   "fortnite",
   "fortnitede",
