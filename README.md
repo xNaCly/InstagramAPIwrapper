@@ -6,13 +6,16 @@
 - reverse engineered internal instagram api wrapper
 
 # Features:
-- getID --> returns PostID for given Postlink
-- likePost --> likes a post by ID
-- unlikePost --> unlikes a post by ID
-- commentPost --> comments on a post by ID
-- deleteComment --> deletes a comment by CommentID & PostID
-- follow --> follows a User by Name
-- user --> returns a User object by Name
-- search --> returns an array of Users for the given search query
+| Method        | return        | args             |
+|---------------|---------------|------------------|
+| getID         | ID            | link             |
+| likePost      | StatusObject  | PostID           |
+| unlikePost    | StatusObject  | PostID           |
+| addComment    | CommentObject | PostID, string   |
+| deleteComment | StatusObject  | PostID,CommentID |
+| follow        | StatusObject  | Username         |
+| unfollow      | StatusObject  | Username         |
+| user          | UserObject    | Username         |
+| search        | UserArray     | string           |
 
 # [Docs](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
