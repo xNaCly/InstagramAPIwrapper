@@ -1,8 +1,8 @@
 # How to authenticate and how to get the authentication:
 
-### How to AUTH:
+## 1. How to AUTH:
 
--   Three values/tokens needed for the authentication:
+-   Three values/tokens needed for the authentication (see 2.):
 
 ```
   	1. X-CSRFToken
@@ -10,7 +10,21 @@
   	3. Cookie
 ```
 
-### How to get these Values:
+#### usage of these:
+
+-   all 3 tokens are needed to init the `Instagram` class:
+
+```
+import wrapper
+auth = {
+	"X-CSRFToken": "",
+	"X-Instagram-AJAX": "",
+	"Cookie": ""
+}
+API = wrapper.Instagram(auth)
+```
+
+## 2. How to get these Values:
 
 -   each of these values/tokens can be found with inspecting networkrequests while being logged in into Instragram.
 
