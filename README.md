@@ -1,3 +1,3 @@
 # InstagramAPIwrapper
 
-- reverse engineered instagram wrapper
+- reverse engineered internal instagram api wrapper
