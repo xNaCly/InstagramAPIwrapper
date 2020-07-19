@@ -1,7 +1,7 @@
 """
 reverse engineered instagram wrapper
 
-currently supports: `getID, likePost, unlikePost, addComment, deleteComment, follow, user, search`
+currently supports: `getPost, likePost, unlikePost, addComment, deleteComment, follow, getUser, search`
 """
 import requests
 import json
@@ -85,7 +85,7 @@ class Instagram:
 			userarray.append(x["user"]["username"])
 		return userarray
 
-	def user(self, user):
+	def getUser(self, user):
 		"""
 		returns info about the given user
 
