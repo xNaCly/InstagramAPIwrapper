@@ -35,7 +35,7 @@ class Instagram:
 
 
 
-	def	getID(self, link):
+	def	getPost(self, link):
 		"""
 		converts share link to internal id
 
@@ -46,7 +46,24 @@ class Instagram:
 		if r.status_code != 200:
 			raise ValueError("Post isnt availabe")
 		rr = json.loads(r.text)
-		return rr["graphql"]["shortcode_media"]["id"]
+		rr = rr["graphql"]["shortcode_media"]
+		u = rr["owner"]
+		postObject = {
+			'id': rr["id"],
+			'type': rr["__typename"],
+			'url': link,
+			'caption': rr["edge_media_to_caption"]["edges"][0]["node"]["text"],
+			'media_url': rr["display_url"],
+			'dimensions': rr["dimensions"],
+			'owner': {
+				'user':{
+					'username': u["username"],
+					'full_name': u["full_name"],
+					'id': u["id"],		
+				}
+			}
+		}
+		return postObject
 
 	def search(self, user):
 		"""
