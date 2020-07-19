@@ -103,7 +103,7 @@ InstaApi.commentPost(2330690413584156001, "Cogito ergo sum")
 }
 """
 
-InstaApi.deleteComment(2330690413584156001, 18138683704070412):
+InstaApi.deleteComment(2330690413584156001, 18138683704070412)
 """
 {'status': 200, 'message': {'status': 'ok'}}
 /

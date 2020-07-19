@@ -1,7 +1,7 @@
 """
 reverse engineered instagram wrapper
 
-currently supports: `getID, likePost, commentPost, follow, user, search`
+currently supports: `getID, likePost, commentPost, deletePost, User, search`
 """
 import requests
 import json
@@ -13,7 +13,7 @@ import time
 default = {
 		"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
 		"Accept": "*/*",
-		"Accept-Language": "de,en-US;q=0.7,en;q=0.3",
+		"Accept-Language": "en-US;q=0.7,en;q=0.3",
 		"Accept-Encoding": "gzip, deflate, br",
 		"Content-Type": "application/x-www-form-urlencoded",
 		"X-Requested-With": "XMLHttpRequest",
@@ -39,7 +39,7 @@ class InstagramBot:
 		"""
 		converts share link to internal id
 
-		throws error if not available/found
+		throws error if not available
 		"""
 		Host = link.split("?")[0] + "?__a=1"
 		r = requests.get(Host, headers=self.headers)
@@ -54,7 +54,7 @@ class InstagramBot:
 
 		returns array of users sorted by relevance
 
-		throws error if none are available/found
+		throws error if none are available
 		"""
 		Host = default["Origin"] + "/web/search/topsearch/?query=" + user
 		r = requests.get(Host, headers=self.headers)
@@ -68,7 +68,7 @@ class InstagramBot:
 			userarray.append(x["user"]["username"])
 		return userarray
 
-	def user(self, user):
+	def User(self, user):
 		"""
 		returns info about the given user
 
@@ -151,7 +151,7 @@ class InstagramBot:
 	
 
 	def follow(self, username):
-		id = self.user(username)
+		id = self.User(username)
 		Host = default["Origin"] + "/web/friendships/" + id["user"]["id"] + "/follow/"
 		r = requests.post(Host, headers=self.headers)
 		robject = {
