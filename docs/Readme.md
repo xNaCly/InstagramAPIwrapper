@@ -1,5 +1,9 @@
 # Docs:
 
+## Setup
+- to get started please take a look [here](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/auth)
+
+
 ## Features:
 | Method        | return        | args             |
 |---------------|---------------|------------------|
