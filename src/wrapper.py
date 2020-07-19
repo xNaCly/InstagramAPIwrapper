@@ -1,7 +1,7 @@
 """
 reverse engineered instagram wrapper
 
-currently supports: `getID, likePost, unlikePost, commentPost, deleteComment, follow, user, search`
+currently supports: `getID, likePost, unlikePost, addComment, deleteComment, follow, user, search`
 """
 import requests
 import json
@@ -111,7 +111,7 @@ class Instagram:
 		"""
 		likes post with given id
 		"""
-		Host =  f"/web/likes/{id}/like/"
+		Host =  default["Origin"] +  f"/web/likes/{id}/like/"
 		r = requests.post(Host, headers=self.headers)
 		robject = {
 			'status': r.status_code,
@@ -123,7 +123,7 @@ class Instagram:
 		"""
 		removes like from post with given id
 		"""
-		Host =  f"/web/likes/{id}/unlike/"
+		Host =  default["Origin"] + f"/web/likes/{id}/unlike/"
 		r = requests.post(Host, headers=self.headers)
 		robject = {
 			'status': r.status_code,
@@ -132,7 +132,7 @@ class Instagram:
 		return robject
 
 
-	def commentPost(self, id, comment):
+	def addComment(self, id, comment):
 		"""
 		comments on post with given id
 		"""
@@ -170,6 +170,5 @@ class Instagram:
 				'message': r.json()
 			}
 		except:
-			raise ValueError(f"Error - either {username} doesnt exist, or auth is invalid")
-		
+			raise ValueError(f"Error - either {username} doesnt exist, or auth is invalid")	
 		return robject
