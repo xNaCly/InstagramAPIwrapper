@@ -2,11 +2,11 @@
 
 ## Args:
 
--   username [string]
+-   username `[str]`
 
 ## Return:
 
-- [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject) [Object]
+- [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject) `[object]`
 
 ```python
 {

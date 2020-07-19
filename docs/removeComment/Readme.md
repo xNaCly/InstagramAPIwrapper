@@ -2,12 +2,12 @@
 
 ## Args:
 
--   postID [str]/[int]
--   commentID [str]/[int]
+-   postID `[str]/[int]`
+-   commentID `[str]/[int]`
 
 ## Return:
 
--   [statusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject) [type]
+-   [statusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject) `[object]`
 
 ```python
 {

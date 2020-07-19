@@ -2,7 +2,7 @@
 
 ## Args:
 
--   username [string]
+-   username `[str]`
 
 ```
 fortnite
@@ -10,7 +10,7 @@ fortnite
 
 ## Return:
 
--   [UserObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#userobject)[object]
+-   [UserObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#userobject)`[object]`
 
 ```python
 {

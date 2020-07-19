@@ -1,11 +1,13 @@
 # addComment
 
 ## Args:
-- postID [str]/[int]
-- comment [str]
+
+-   postID `[str]/[int]`
+-   comment `[str]`
 
 ## Return:
-- [commentObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#commentobject) [type]
+
+-   [commentObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#commentobject) `[object]`
 
 ```python
 {
@@ -26,6 +28,7 @@
 ```
 
 ## Code example:
+
 ```python
 import wrapper
 auth = {

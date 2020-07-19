@@ -2,7 +2,7 @@
 
 ## Args:
 
--   username [string]
+-   username `[str]`
 
 ```
 fortnite
@@ -10,7 +10,7 @@ fortnite
 
 ## Return:
 
--   Users [array]
+-   Users `[array]`
 
 ```python
 [
