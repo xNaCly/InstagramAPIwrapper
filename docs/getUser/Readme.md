@@ -12,7 +12,7 @@ fortnite
 
 -   [UserObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#userobject)[object]
 
-```
+```python
 {
   "user": {
     "username": "fortnite",
