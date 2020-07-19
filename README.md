@@ -9,13 +9,13 @@
 | Method        | return        | args             |
 |---------------|---------------|------------------|
 | getID         | ID            | link             |
-| likePost      | StatusObject  | PostID           |
-| unlikePost    | StatusObject  | PostID           |
-| addComment    | CommentObject | PostID, string   |
-| deleteComment | StatusObject  | PostID,CommentID |
-| follow        | StatusObject  | Username         |
-| unfollow      | StatusObject  | Username         |
-| user          | UserObject    | Username         |
+| likePost      | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | PostID           |
+| unlikePost    | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | PostID           |
+| addComment    | [CommentObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#commentobject) | PostID, string   |
+| deleteComment | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | PostID,CommentID |
+| follow        | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | Username         |
+| unfollow      | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | Username         |
+| user          | [UserObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#userobject)    | Username         |
 | search        | UserArray     | string           |
 
 # [Docs](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
