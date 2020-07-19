@@ -10,7 +10,7 @@ fortnite
 
 ## Return:
 
--   [UserObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#userobject)
+-   [UserObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#userobject)[object]
 
 ```
 {

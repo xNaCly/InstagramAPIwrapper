@@ -10,7 +10,7 @@ fortnite
 
 ## Return:
 
--   UserArray
+-   Users [array]
 
 ```
 [
