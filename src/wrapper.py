@@ -21,7 +21,7 @@ default = {
 		"Origin": "https://www.instagram.com",
 	}
 
-class InstagramBot:
+class Instagram:
 	def __init__(self, auth):
 		self.auther = json.loads(auth)
 		self.auth = {
@@ -86,6 +86,7 @@ class InstagramBot:
 				'full_name': u["full_name"],
 				'id': u["id"],
 				'bio': u["biography"],
+				'url': f'https://www.instagram.com/{u["username"]}/',
 				'profile_pic': u["profile_pic_url_hd"]
 			},
 			'followers': u["edge_followed_by"]["count"],

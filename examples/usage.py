@@ -1,4 +1,4 @@
-import instaWrapper
+import wrapper
 
 config = {
 	"X-CSRFToken": "",
@@ -6,7 +6,7 @@ config = {
 }
 
 # init class with auth
-InstaApi = instaWrapper.InstagramBot(config)
+InstaApi = instaWrapper.Instagram(config)
 
 # ---------------------------------------------------------
 
