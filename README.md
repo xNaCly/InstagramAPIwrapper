@@ -3,6 +3,16 @@
 </p>
 
 ### Private Instagram API wrapper
-
 - reverse engineered internal instagram api wrapper
+
+# Features:
+- getID --> returns PostID for given Postlink
+- likePost --> likes a post by ID
+- unlikePost --> unlikes a post by ID
+- commentPost --> comments on a post by ID
+- deleteComment --> deletes a comment by CommentID & PostID
+- follow --> follows a User by Name
+- user --> returns a User object by Name
+- search --> returns an array of Users for the given search query
+
 # [Docs](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
