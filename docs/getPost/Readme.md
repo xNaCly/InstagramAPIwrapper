@@ -31,7 +31,7 @@ https://www.instagram.com/p/CBYRpUnF4Vh
 ```
 
 ## Code example:
-```
+```python
 import wrapper
 auth = {
 	"X-CSRFToken": "",

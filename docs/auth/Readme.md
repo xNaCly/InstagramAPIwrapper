@@ -14,7 +14,7 @@
 
 -   all 3 tokens are needed to init the `Instagram` class:
 
-```
+```python
 import wrapper
 auth = {
 	"X-CSRFToken": "",
