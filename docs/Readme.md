@@ -2,7 +2,7 @@
 
 ### General Terms:
 
-StatusObject:
+#### StatusObject:
 
 ```
 {
@@ -13,7 +13,7 @@ StatusObject:
 }
 ```
 
-UserObject:
+#### UserObject:
 
 ```
 {
@@ -42,7 +42,7 @@ UserObject:
 }
 ```
 
-CommentObject:
+#### CommentObject:
 
 ```
 {
