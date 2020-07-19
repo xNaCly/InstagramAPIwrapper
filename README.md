@@ -21,3 +21,8 @@
 | [search](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/search)        | UserArray     | string           |
 
 
+# Planned Feautures:
+- [x] add Docs
+- [ ] add uploading posts
+- [ ] add usersettings
+- [ ] add comments to PostObject
