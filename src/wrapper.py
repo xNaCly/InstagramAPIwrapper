@@ -164,8 +164,12 @@ class Instagram:
 		id = self.user(username)
 		Host = default["Origin"] + "/web/friendships/" + id["user"]["id"] + "/follow/"
 		r = requests.post(Host, headers=self.headers)
-		robject = {
-			'status': r.status_code,
-			'message': r.json()
-		}
+		try:
+			robject = {
+				'status': r.status_code,
+				'message': r.json()
+			}
+		except:
+			raise ValueError(f"Error - either {username} doesnt exist, or auth is invalid")
+		
 		return robject
