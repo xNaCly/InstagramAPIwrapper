@@ -7,7 +7,7 @@
 - what [type]
 
 ```
-example
+example of output
 ```
 
 ## Code example:
