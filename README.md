@@ -5,6 +5,8 @@
 ### Private Instagram API wrapper
 - reverse engineered internal instagram api wrapper
 
+# [Docs](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
+
 # Features:
 | Method        | return        | args             |
 |---------------|---------------|------------------|
@@ -18,4 +20,4 @@
 | [getUser](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/getUser)          | [UserObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#userobject)    | Username         |
 | [search](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/search)        | UserArray     | string           |
 
-# [Docs](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
+
