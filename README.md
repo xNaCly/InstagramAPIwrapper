@@ -11,7 +11,7 @@
 | [getPost](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/getPost)        | [PostObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#postobject)           | link             |
 | [likePost](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/likePost)      | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | PostID           |
 | [unlikePost](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/unlikePost)    | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | PostID           |
-| [addComment](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/addComment)    | [CommentObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#commentobject) | PostID, string   |
+| [addComment](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/addComment)    | [CommentObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#commentobject) | PostID, comment   |
 | [removeComment](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/addComment) | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | PostID,CommentID |
 | [follow](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/follow)        | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | Username         |
 | [unfollow](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/unfollow)      | [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)  | Username         |
