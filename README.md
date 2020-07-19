@@ -23,7 +23,7 @@
 
 # Planned Feautures:
 - [x] add Docs
-- [ ] add uploading posts
-- [ ] add usersettings
-- [ ] add comments to PostObject
+- [ ] add uploading posts (from url?/from file, with caption)
+- [ ] add usersettings (change profilepic/change username/other settings)
+- [ ] add comments to PostObject (comments from Post to PostObject)
 - [ ] make a video showcasing all methods
