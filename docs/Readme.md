@@ -1,7 +1,7 @@
 # Docs:
 
 ## General Info:
-- all methods are well documented here
+- all methods are well documented [here](https://github.com/xNaCly/InstagramAPIwrapper/blob/master/docs)
 - all returnObjects are formated as Python-dicts
 
 ## General Terms:
