@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">xnacly</h1>
 
-# Private Instagram API wrapper
+### Private Instagram API wrapper
 
 - reverse engineered internal instagram api wrapper
-### [Docs](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
+# [Docs](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
