@@ -2,6 +2,7 @@ import wrapper
 
 config = {
 	"X-CSRFToken": "",
+	"X-Instagram-AJAX":"",
 	"Cookie": ""
 }
 
