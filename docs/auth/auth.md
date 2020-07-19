@@ -35,5 +35,5 @@ API = wrapper.Instagram(auth)
 	4. go to request headers
 	5. and search for X-CSRFToken, X-Instagram-AJAX and Cookie
 ```
-
+#### Example:
 <img src="https://cdn.discordapp.com/attachments/568847750226116609/734382276376395806/Untitled-2.png">
