@@ -1,4 +1,4 @@
-# How to authenticate and how to get the authentication:
+# How to authenticate:
 
 ## 1. How to AUTH:
 
