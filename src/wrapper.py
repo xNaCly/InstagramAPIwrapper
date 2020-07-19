@@ -164,7 +164,7 @@ class Instagram:
 		}
 		return robject
 
-	def deleteComment(self, postID, commentID):
+	def removeComment(self, postID, commentID):
 		"""
 		removes a comment on post with given postID & commentID
 		"""
@@ -178,6 +178,9 @@ class Instagram:
 	
 
 	def follow(self, username):
+		"""
+		follows the given user
+		"""
 		id = self.getUser(username)
 		Host = default["Origin"] + "/web/friendships/" + id["user"]["id"] + "/follow/"
 		r = requests.post(Host, headers=self.headers)
@@ -191,6 +194,9 @@ class Instagram:
 		return robject
 	
 	def unfollow(self, username):
+		"""
+		unfollow the given user
+		"""
 		id = self.getUser(username)
 		Host = default["Origin"] + "/web/friendships/" + id["user"]["id"] + "/unfollow/"
 		r = requests.post(Host, headers=self.headers)
