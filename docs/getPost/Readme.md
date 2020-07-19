@@ -9,7 +9,7 @@ https://www.instagram.com/p/CBYRpUnF4Vh
 
 ## Return:
 - [PostObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#postobject)[object]
-```
+```python
 {
   "id": "2330690413584156001",
   "type": "GraphImage",
