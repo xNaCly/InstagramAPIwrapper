@@ -1,7 +1,7 @@
 """
 reverse engineered instagram wrapper
 
-currently supports: `getID, likePost, commentPost, follow, user, search`
+currently supports: `getID, likePost, unlikePost, commentPost, deleteComment, follow, user, search`
 """
 import requests
 import json
@@ -107,14 +107,23 @@ class Instagram:
 		return userobject
 
 
-	def likePost(self, id, unlike):
+	def likePost(self, id):
 		"""
 		likes post with given id
 		"""
-		ty = "like"
-		if  unlike == True:
-			ty = "unlike"
-		Host =  f"/web/likes/{id}/{ty}/"
+		Host =  f"/web/likes/{id}/like/"
+		r = requests.post(Host, headers=self.headers)
+		robject = {
+			'status': r.status_code,
+			'message': r.json()
+		}
+		return robject
+	
+	def unlikePost(self, id):
+		"""
+		removes like from post with given id
+		"""
+		Host =  f"/web/likes/{id}/unlike/"
 		r = requests.post(Host, headers=self.headers)
 		robject = {
 			'status': r.status_code,
