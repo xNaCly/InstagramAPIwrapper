@@ -1,12 +1,12 @@
-# unfollow
+# likePost
 
 ## Args:
 
--   username [string]
+-   postID [str]
 
 ## Return:
 
-- [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)[Object]
+-   [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)[Object]
 
 ```python
 {
@@ -27,5 +27,5 @@ auth = {
 	"Cookie": ""
 }
 API = wrapper.Instagram(auth)
-print(API.unfollow("fortnite"))
+print(API.likePost(2356803465986446994))
 ```

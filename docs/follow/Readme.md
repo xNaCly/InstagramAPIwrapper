@@ -4,7 +4,7 @@
 - username [string]
 
 ## Return:
-- StatusObject [Object]
+- [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject)[Object]
 
 ```python
 {
