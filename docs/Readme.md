@@ -8,7 +8,7 @@
 
 #### StatusObject:
 
-```
+```python
 {
   "status": 200,
   "message": {
@@ -19,7 +19,7 @@
 
 #### UserObject:
 
-```
+```python
 {
   "user": {
     "username": "fortnite",
@@ -48,7 +48,7 @@
 
 #### CommentObject:
 
-```
+```python
 {
   "status": 200,
   "message": {
@@ -68,7 +68,7 @@
 
 #### PostObject:
 
-```
+```python
 {
   "id": "2330690413584156001",
   "type": "GraphImage",
