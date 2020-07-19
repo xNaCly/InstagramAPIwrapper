@@ -34,7 +34,6 @@ https://www.instagram.com/p/CBYRpUnF4Vh
 ```
 import wrapper
 auth = {
-	auth = {
 	"X-CSRFToken": "",
 	"X-Instagram-AJAX": "",
 	"Cookie": ""
