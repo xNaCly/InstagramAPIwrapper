@@ -26,3 +26,4 @@
 - [ ] add uploading posts
 - [ ] add usersettings
 - [ ] add comments to PostObject
+- [ ] make a video showcasing all methods
