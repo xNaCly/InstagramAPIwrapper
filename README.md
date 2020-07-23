@@ -21,7 +21,7 @@
 | [search](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs/search)        | UserArray     | string           |
 
 
-# Planned Feautures:
+# Planned Features:
 - [x] add Docs
 - [ ] add uploading posts (from url?/from file, with caption)
 - [ ] add usersettings (change profilepic/change username/other settings)
