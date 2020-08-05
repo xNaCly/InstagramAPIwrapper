@@ -4,7 +4,7 @@
 - username `[str]`
 
 ## Return:
-- [StatusObject] (https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject) `[object]`
+- [StatusObject](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs#statusobject) `[object]`
 
 ```python
 {
