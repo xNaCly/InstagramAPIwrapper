@@ -34,6 +34,8 @@ class Instagram:
 		self.headers.update(self.auth)
 
 
+	# def login(self, username, password):
+		# r = 
 
 	def	getPost(self, link):
 		"""
