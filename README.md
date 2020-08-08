@@ -22,6 +22,7 @@
 
 
 # Planned Features:
+- [ ] add Login with Username & Password (not possible with api due to encryption)
 - [x] add Docs
 - [ ] add uploading posts (from url?/from file, with caption)
 - [ ] add usersettings (change profilepic/change username/other settings)
