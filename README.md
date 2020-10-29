@@ -25,4 +25,4 @@
 
 
 # Planned Features:
-#1
+[#1](https://github.com/xNaCly/InstagramAPIwrapper/issues/1)
