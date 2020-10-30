@@ -31,7 +31,7 @@ API = wrapper.Instagram(auth)
 ```
 	1. open dev tools (F12)
 	2. unfollow someone
-	3. look out for a request named: 'https://www.instagram.com/web/friendships/['numbers']/unfollow/'
+	3. look out for a request named: 'https://www.instagram.com/web/friendships/<numbers>/unfollow/'
 	4. go to request headers
 	5. and search for X-CSRFToken, X-Instagram-AJAX and Cookie
 ```
