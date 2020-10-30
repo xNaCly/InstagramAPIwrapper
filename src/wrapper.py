@@ -1,8 +1,3 @@
-"""
-reverse engineered instagram wrapper
-
-currently supports: `getPost, likePost, unlikePost, addComment, removeComment, follow, getUser, search`
-"""
 import requests
 import json
 from time import sleep as s
@@ -22,20 +17,24 @@ default = {
 	}
 
 class Instagram:
-	def __init__(self, auth):
-		self.auther = json.loads(auth)
+	"""
+	reverse engineered instagram wrapper
+
+	see docs here: [DOCS](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
+	"""
+	def __init__(self, auth: dict):
+		if not auth:
+			raise ValueError("No auth given")
+		# self.auther = json.loads(auth)
 		self.auth = {
-		"X-CSRFToken": self.auther["X-CSRFToken"],
-		"Cookie": self.auther["Cookie"],
-		"X-Instagram-AJAX": self.auther["X-Instagram-AJAX"]
+			"X-CSRFToken": auth["X-CSRFToken"],
+			"Cookie": auth["Cookie"],
+			"X-Instagram-AJAX": auth["X-Instagram-AJAX"]
 		}
 		self.headers = {}
 		self.headers.update(default)
 		self.headers.update(self.auth)
 
-
-	# def login(self, username, password):
-		# r = 
 
 	def	getPost(self, link):
 		"""
@@ -210,3 +209,20 @@ class Instagram:
 		except:
 			raise ValueError(f"Error - either {username} doesnt exist, or auth is invalid")	
 		return robject
+	
+	def changeSettings(self, settings: dict = {'first_name':'','email':'','username':'','phone_number':'','biography':'','website':''}):
+		"""
+		change settings
+		"""
+		form = f"first_name={str(urllib.parse.quote(settings['first_name'])).replace('%20','+')}&email={urllib.parse.quote(settings['email'])}&username={urllib.parse.quote(settings['username'])}&phone_number={urllib.parse.quote(settings['phone_number'])}&biography={str(urllib.parse.quote(settings['biography']).replace('%20','+'))}&external_url={settings['website']}&chaining_enabled=on"
+		Host = default["Origin"] + "/accounts/edit"
+		r = requests.post(Host, headers=self.headers,data=form)
+		try:
+			robject = {
+				'status': r.status_code,
+				'message': r.json()
+			}
+		except:
+			raise ValueError(f"Error - auth is invalid")	
+		return robject
+
