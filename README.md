@@ -6,7 +6,7 @@
 # Using this wrapper will propably flag your account !
 
 ### Private Instagram API wrapper
-- reverse engineered internal instagram api wrapper
+- reverse engineered instagram web-api wrapper
 
 # [Docs](https://github.com/xNaCly/InstagramAPIwrapper/tree/master/docs)
 
